@@ -61,19 +61,13 @@ window.addEventListener('keydown',function(e){
 
 var bullet = document.querySelector('.bullet')
 
-var newbullet=document.createElement('img');
-    bullet.append(newbullet);
-    newbullet.setAttribute('src','Images/Images/Bullet.png')
-
 rocket.onclick=function(e){
     var newbullet=document.createElement('img');
     bullet.append(newbullet);
     newbullet.setAttribute('src','Images/Images/Bullet.png') 
     setInterval(() => {
-        var height=0;
-        height+=5;
-        newbullet.style.bottom=height+'px';
-    }, 1000);
+        bullet.style.top=0;
+    }, 100);
 }
 
 
