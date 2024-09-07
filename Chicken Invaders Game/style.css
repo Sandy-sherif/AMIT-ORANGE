@@ -24,9 +24,8 @@ body{
 
 .rocket{
     position: absolute;
-    display: flex;
-    justify-content: center;
     bottom: 0;
+    z-index: 2;
 }
 .rocket img{
     width:150px;
@@ -34,6 +33,11 @@ body{
 }
 .bullet{
     position: absolute;
+    bottom:125px;
+    left:50px;
+    display:flex;
+    flex-direction: column;
+    margin-top:2px;
 }
 
 .bullet img{

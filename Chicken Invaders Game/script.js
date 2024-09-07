@@ -65,7 +65,7 @@ var newbullet=document.createElement('img');
     bullet.append(newbullet);
     newbullet.setAttribute('src','Images/Images/Bullet.png')
 
-bullet.onclick=function(e){
+rocket.onclick=function(e){
     var newbullet=document.createElement('img');
     bullet.append(newbullet);
     newbullet.setAttribute('src','Images/Images/Bullet.png') 
@@ -73,7 +73,7 @@ bullet.onclick=function(e){
         var height=0;
         height+=5;
         newbullet.style.bottom=height+'px';
-    }, 2000);
+    }, 1000);
 }
 
 
