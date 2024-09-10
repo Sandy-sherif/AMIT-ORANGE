@@ -7,6 +7,9 @@ footer{
   flex-direction: column;
   position: relative;
 }
+h2{
+  text-transform: uppercase;
+}
 .sections{
   width: 90%;
   display: flex;
