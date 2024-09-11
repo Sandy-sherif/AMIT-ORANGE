@@ -1,5 +1,5 @@
 var chicken = document.querySelector('.chicken');
-var noOfChickens=64;
+var noOfChickens=70;
 
 for(var x=0;x<noOfChickens;x++){
     
@@ -10,7 +10,7 @@ for(var x=0;x<noOfChickens;x++){
 
 
 var rocket=document.querySelector('.rocket');
-rocket.innerHTML='<img src="Images/Images/Rocket.png" />';
+rocket.innerHTML='<div class="bullet"> </div> <img src="Images/Images/Rocket.png" /> ';
 
 var positionY=0
 var positionX=0
@@ -20,12 +20,12 @@ var windowheight=window.screen.availHeight;
 window.addEventListener('keydown',function(e){
     if(e.code==='ArrowUp'){
         positionY+=10
-        if(positionY<=windowheight-200){
+        if(positionY<=windowheight-((windowheight*10)/100)){
             rocket.style.bottom=positionY+'px';
         }
         else{
             positionY=10;
-            rocket.style.bottom=positionY;
+            rocket.style.bottom=positionY+'px';
         }
     }else if(e.code==='ArrowDown'){
         positionY -=10
@@ -38,7 +38,7 @@ window.addEventListener('keydown',function(e){
         }
     }else if(e.code==='ArrowLeft'){
         positionX+=10
-        if(positionX<=windowwidth-200){
+        if(positionX<=windowwidth-((windowwidth*10)/100)){
             rocket.style.right=positionX+'px';
         }
         else{
@@ -62,12 +62,16 @@ window.addEventListener('keydown',function(e){
 var bullet = document.querySelector('.bullet')
 
 rocket.onclick=function(e){
+    console.log(e);
     var newbullet=document.createElement('img');
     bullet.append(newbullet);
     newbullet.setAttribute('src','Images/Images/Bullet.png') 
+    let currentBottom = parseInt(newbullet.style.bottom) || 0;
     setInterval(() => {
-        bullet.style.top=0;
-    }, 100);
+        currentBottom+=10
+        newbullet.style.bottom=currentBottom+'px';
+        console.log(newbullet.style.bottom);
+    }, 30);
 }
 
 
