@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+}
+
+nav{
+    height: 8vh;
+    width:100vw;
+    background-color: black;
+    position: fixed;
+    top:0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+footer{
+    height: 30vh;
+    background-color: black;
+    position: relative;
+    display: flex;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+nav img{
+    height: 6vh;
+    align-self: center;
+    margin: 0 1vw;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 1vw;
+}
+
+.links a{
+    margin:0 0.4vw;
+    color: rgb(216, 180, 84);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.links a:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 0.2rem;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin:10%;
+}
+.left{
+    display: flex;
+    flex-direction: row;
+    margin-right: 3%;
+}
+
+.left .image{
+    height: 60vh;
+    border-radius: 0.5em;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:0 3vw;
+}
+
+.images img{
+    height: 10vh;
+    margin:0.5vw 0;
+    opacity: 0.5;
+    border-radius: 0.5em;
+    
+}
+
+.images img:hover{
+    opacity: 1!important;
+}
+
+.right h2{
+    margin-bottom: 12%;
+    font-size:3em;
+}
+
+.firstsection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+}
+.firstsection p{
+    color: white;
+    word-spacing: 5px;
+}
+
+.firstsection img{
+    height: 10vh;
+}
+
+.secondsection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.face,.insta{
+    background-color: white;
+    
+}
+
+.face img,.insta img{
+    height: 6vh;
+    width:4vw;
+}
+
+
+.thirdsection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
